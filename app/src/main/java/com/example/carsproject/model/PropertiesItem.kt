@@ -1,12 +1,13 @@
 package com.example.carsproject.model
 
-import com.google.gson.annotations.SerializedName
+
+import com.squareup.moshi.Json
 
 data class PropertiesItem(
 
-    @field:SerializedName("name")
+    @Json(name = "name")
     val name: String? = null,
 
-    @field:SerializedName("value")
+    @Json(name = "value")
     val value: String? = null
 )

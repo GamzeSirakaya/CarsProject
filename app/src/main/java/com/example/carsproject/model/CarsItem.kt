@@ -1,39 +1,39 @@
 package com.example.carsproject.model
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class CarsItem(
 
-    @field:SerializedName("date")
+    @Json(name = "date")
     val date: String? = null,
 
-    @field:SerializedName("modelName")
+    @Json(name = "modelName")
     val modelName: String? = null,
 
-    @field:SerializedName("price")
+    @Json(name = "price")
     val price: Int? = null,
 
-    @field:SerializedName("priceFormatted")
+    @Json(name = "priceFormatted")
     val priceFormatted: String? = null,
 
-    @field:SerializedName("photo")
+    @Json(name = "photo")
     val photo: String? = null,
 
-    @field:SerializedName("location")
+    @Json(name = "location")
     val location: Location? = null,
 
-    @field:SerializedName("id")
+    @Json(name = "id")
     val id: Int? = null,
 
-    @field:SerializedName("dateFormatted")
+    @Json(name = "dateFormatted")
     val dateFormatted: String? = null,
 
-    @field:SerializedName("title")
+    @Json(name = "title")
     val title: String? = null,
 
-    @field:SerializedName("category")
+    @Json(name = "category")
     val category: Category? = null,
 
-    @field:SerializedName("properties")
+    @Json(name = "properties")
     val properties: List<PropertiesItem?>? = null
 )

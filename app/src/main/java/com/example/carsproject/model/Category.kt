@@ -1,12 +1,12 @@
 package com.example.carsproject.model
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class Category(
 
-    @field:SerializedName("name")
+    @Json(name = "name")
     val name: String? = null,
 
-    @field:SerializedName("id")
+    @Json(name = "id")
     val id: Int? = null
 )

@@ -1,13 +1,13 @@
 package com.example.carsproject.model
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 
 data class Location(
 
-    @field:SerializedName("townName")
+    @Json(name = "townName")
     val townName: String? = null,
 
-    @field:SerializedName("cityName")
+    @Json(name = "cityName")
     val cityName: String? = null
 )
