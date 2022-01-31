@@ -1,19 +1,23 @@
 package com.example.carsproject.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.example.carsproject.R
+import com.example.carsproject.databinding.CarListFragmentBinding
+import com.example.carsproject.viewModel.CarListViewModel
 
-class CarListFragment : Fragment() {
+class CarListFragment : Fragment(R.layout.car_list_fragment) {
+    private lateinit var carListFragmentBinding: CarListFragmentBinding
+    private lateinit var carListViewModel: CarListViewModel
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val binding = CarListFragmentBinding.bind(view)
+        carListFragmentBinding = binding
+        carListViewModel = ViewModelProvider(this).get(CarListViewModel::class.java)
+        println("xxx" + (carListViewModel.carList.value?.size))
+        super.onViewCreated(view, savedInstanceState)
     }
 }
